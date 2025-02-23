@@ -30,7 +30,7 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re delay
 
 RED     := $(shell tput setaf 1)
 GREEN   := $(shell tput setaf 2)
