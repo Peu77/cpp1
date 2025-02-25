@@ -1,11 +1,17 @@
 #include "Harl.h"
 
-int main() {
+#include <iostream>
+
+int main(int argc, char** argv) {
 	Harl harl;
 
-	harl.complain("debug");
-	harl.complain("info");
-	harl.complain("warning");
-	harl.complain("error");
-	harl.complain("fatal");
+   	if(argc != 2) {
+  		std::cerr << "Usage: " << argv[0] << " <complaint level>" << std::endl;
+		return 1;
+	}
+
+    std::string userComplaint = argv[1];
+    for (size_t i = 0; i < userComplaint.length(); i++)
+		userComplaint[i] = toupper(userComplaint[i]);
+	harl.complain(userComplaint);
 }

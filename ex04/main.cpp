@@ -12,7 +12,7 @@ int main(const int argc, char *argv[]) {
 		return 1;
 	}
 
-	if (!argv[1] || !argv[2] || !argv[3]) {
+	if (!argv[1][0] || !argv[2][0] || !argv[3][0]) {
 		std::cerr << RED << "None of these arguments should be empty" << RESET << std::endl;
 		printUsage();
 		return 1;
